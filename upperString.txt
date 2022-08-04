@@ -1,0 +1,7 @@
+int main(){
+int idade;
+
+
+strcpy(nomeM, strupr(nome));
+
+}

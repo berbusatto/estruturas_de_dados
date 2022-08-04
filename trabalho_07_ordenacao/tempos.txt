@@ -1,0 +1,23 @@
+BubbleSort
+100k Desordenado - Tempo de execução: 26,759000s
+100k Decrescente - Tempo de execução: 74,959000s
+500k Desordenado - Tempo de execução: 226,202000s
+500k Decrescente - Tempo de execução: 207,202000s
+
+InsertionSort
+100k Desordenado - Tempo de execução: 9,104000s
+100k Decrescente - Tempo de execução: 18,252000s
+500k Desordenado - Tempo de execução: 155,934000s
+500k Decrescente - Tempo de execução: 175,962000s
+
+SelectionSort 
+- 100k Desordenado - Tempo de execução: 89,019000s
+- 100k Decrescente - Tempo de execução: 88,574000s
+- 500k Desordenado - Tempo de execução: 364,981000s
+- 500k Decrescente - Tempo de execução: 489,001000s
+
+QuickSort
+- 100k Desordenado - Tempo de execução: 0,028000s
+- 100k Decrescente - Tempo de execução: 0,006000s
+- 500k Desordenado - Tempo de execução: 0,134000s
+- 500k Decrescente - Tempo de execução: 0,046000s

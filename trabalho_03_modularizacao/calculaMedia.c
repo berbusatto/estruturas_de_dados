@@ -1,0 +1,86 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <locale.h>
+
+
+#define QTDNOTAS 4
+
+float calculo(float n1, float n2, float n3, float n4);
+void mostra(char nomeInput[], long unsigned int matriculaInput, float mediaInput);
+int confereFormato(float notaInput);
+
+int main(){
+		setlocale(LC_ALL, "Portuguese");
+		char nome[51]; 
+		float nota1, nota2, nota3, nota4, media;
+		unsigned long matricula;
+		
+		printf("Matrícula: ");
+		scanf("%li", &matricula);
+		fflush(stdin);
+		
+		
+		while(matricula != 0){
+			printf("Nome: ");
+			gets(nome);
+			
+			printf("Nota 1: ");
+			scanf("%f", &nota1);
+			while(confereFormato(nota1) == 0){
+				printf("Digite uma nota de 0 a 10! \n");
+				scanf("%f", &nota1);
+			}
+			
+			
+			printf("Nota2: ");		
+			scanf("%f", &nota2);
+			while(confereFormato(nota2) == 0){
+				printf("Digite uma nota de 0 a 10! \n");
+				scanf("%f", &nota2);
+			}
+			
+			
+			printf("Nota 3: ");
+			scanf("%f", &nota3);
+			while(confereFormato(nota3) == 0){
+				printf("Digite uma nota de 0 a 10! \n");
+				scanf("%f", &nota3);
+			}
+			
+			printf("Nota 4: ");
+			scanf("%f", &nota4);
+			while(confereFormato(nota4) == 0){
+				printf("Digite uma nota de 0 a 10! \n");
+				scanf("%f", &nota4);
+			}		
+			
+			
+			media = calculo(nota1, nota2, nota3, nota4);
+			mostra(nome, matricula, media);
+			
+			printf("--------------------------------\n");
+			fflush(stdin);
+			
+			printf("Matrícula: ");
+			scanf("%li", &matricula);
+			fflush(stdin);
+			
+	}
+		
+	return 0;
+}
+
+
+float calculo(float n1, float n2, float n3, float n4){
+	return (n1 + n2 + n3 + n4) / QTDNOTAS;
+
+}
+
+void mostra(char nomeInput[], long unsigned int matriculaInput, float mediaInput){
+	printf("O aluno %s de matrícula %li tem média %.1f\n", nomeInput, matriculaInput, mediaInput);
+}
+
+// BÔNUS!!
+int confereFormato(float notaInput){
+	return (notaInput > 10 || notaInput < 0) ? 0 : 1;
+}
